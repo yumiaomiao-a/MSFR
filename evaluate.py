@@ -61,7 +61,7 @@ test_dataloader = dataloader ['test']
 dataset_size = {x:len(image_datasets[x]) for x in ['train','test']}
 
 
-from model_final_addition import VGG_based_multi
+from Model import VGG_based_multi
 model = VGG_based_multi()
 
 ## load the trained model
