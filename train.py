@@ -87,12 +87,11 @@ test_dataloader = dataloader ['test']
 dataset_size = {x:len(image_datasets[x]) for x in ['train','test']}
 
 
-from model_final_addition import VGG_based_multi
-# from model_final_tiao import VGG_based_multi
+from Model import VGG_based_multi
 model = VGG_based_multi()
 
 ## load the trained model
-# dic = torch.load('./save_final_lossweight/1-10-10-all-result/ff-nt/MSFR_A_iet_2.pth')
+# dic = torch.load('xxx.pth')
 # new_state_dict = {}
 # for k,v in dic.items():
 #     new_state_dict[k[7:]] = v
@@ -130,7 +129,7 @@ epoch_n = 60
 
 
 def save_models(epoch):
-    torch.save(model.state_dict(), "./save_final_lossweight/1-10-10-all-result/ff-fs/MSFR_A_iet2_{}.pth".format(epoch))
+    torch.save(model.state_dict(), "./save_model//MSFR_A_{}.pth".format(epoch))
 print("Chekcpoint saved")
 
 
@@ -198,12 +197,12 @@ def train(num_epochs):
 
         # print("_____________",train_dataloader)
         for i, (images, labels) in enumerate(train_dataloader):
-            # 若GPU可用，将图像和标签移往GPU
+            # put image and label to GPU
             i+=1
             images = images.cuda()
             labels = labels.cuda()
 
-            #数据增强
+            #data augmentation
             for j in range(len(images)):
                 p = np.random.rand()
                 # print(p)
