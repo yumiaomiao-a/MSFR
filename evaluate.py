@@ -2,7 +2,7 @@ import torch
 import torchvision
 from torch.autograd import Variable
 from torchvision import datasets, transforms
-import os            # os包集成了一些对文件路径和目录进行操作的类
+import os            
 import matplotlib.pyplot as plt
 import time
 import torch.nn as nn
@@ -17,8 +17,7 @@ from sklearn import metrics
 from sklearn.metrics import recall_score,f1_score,precision_score
 
 
-
-# read data
+# import data path
 data_dir = './celeb-df-120-60(1.3)'
 # data_dir = './timit-hq-10000-2800'
 #data_dir = './data-400-train-test'
@@ -66,7 +65,7 @@ from model_final_addition import VGG_based_multi
 model = VGG_based_multi()
 
 ## load the trained model
-dic = torch.load('./save_final_lossweight/1-10-10-all-result/ff-df/MSFR_A_iet_34.pth')
+dic = torch.load('./save_model/celeb_MSFR_A.pth')
 new_state_dict = {}
 for k,v in dic.items():
     new_state_dict[k[7:]] = v
@@ -103,7 +102,7 @@ model = model.cuda()
 epoch_n = 60
 
 def save_models(epoch):
-    torch.save(model.state_dict(), "./save_final_aug/c40_multi_3c/model_{}.pth".format(epoch))
+    torch.save(model.state_dict(), "./save_model/model_{}.pth".format(epoch))
 print("Chekcpoint saved")
 
 
