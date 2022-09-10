@@ -14,7 +14,7 @@ from torchvision.transforms import Resize
 def face_eraser_gray(input_img):
     v_l=127
     v_h=129
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     input_img = input_img.gpu().numpy()*255
     input_img = input_img.astype('uint8')
     input_img = np.transpose(input_img,(1,2,0))
@@ -38,7 +38,7 @@ def face_eraser_gray(input_img):
 def bg_eraser_gray(input_img):
     v_l=127
     v_h=129
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     input_img = input_img.gpu().numpy()*255
     input_img = input_img.astype('uint8')
     input_img = np.transpose(input_img,(1,2,0))
@@ -69,7 +69,7 @@ def face_eraser_shuffle(input_img):
         arr = np.arange(size)
         np.random.shuffle(arr)
         return arr
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     input_img = input_img.gpu().numpy()*255
     input_img = input_img.astype('uint8')
     input_img = np.transpose(input_img,(1,2,0))
@@ -102,7 +102,7 @@ def bg_eraser_shuffle(input_img):
         arr = np.arange(size)
         np.random.shuffle(arr)
         return arr
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     input_img = input_img.gpu().numpy()*255
     input_img = input_img.astype('uint8')
     input_img = np.transpose(input_img,(1,2,0))
@@ -143,7 +143,7 @@ def face_eraser_change(input_img,dir):
     fillimage = dir[i]
     # print('+++_________',fillimage.shape)
     # print('++_________',fillimage.dtype)
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     input_img = input_img.gpu().numpy()*255
     input_img = input_img.astype('uint8')
     input_img = np.transpose(input_img,(1,2,0))
@@ -188,7 +188,7 @@ def bg_eraser_change(input_img,dir):
     dirlen = len(dir)
     i = random.randint(0,dirlen-1)
     fillimage = dir[i]
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     input_img = input_img.gpu().numpy()*255
     input_img = input_img.astype('uint8')
     input_img = np.transpose(input_img,(1,2,0))
@@ -250,7 +250,7 @@ def get_one_image(dir):
 if __name__ == '__main__':
 
     import cv2
-    face_detector = cv2.CascadeClassifier('./haarcascades/haarcascade_frontalface_default.xml')
+    face_detector = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
     frame = cv2.imread('real.jpg')
     gray = cv2.cvtColor(frame,cv2.COLOR_BGR2BGRA)
     print('++++++',gray.dtype)
@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
 
 
-
+'''
     img = cv2.imread('./celeb-df-120-60(1.3)/test/real/0098/00000.jpg')
     img = img[...,::-1]
     plt.xticks([]) # 不显示x轴
@@ -361,4 +361,4 @@ if __name__ == '__main__':
 
     #plt.show()
 
-
+'''
