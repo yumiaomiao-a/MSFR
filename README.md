@@ -8,12 +8,12 @@ If you use this repository for your research, please consider citing our paper. 
 This repository is currently under maintenance, if you are experiencing any problems, please open an issue.
 
 ### Prerequisites:  
-conda create -n twostream python=3.6
-conda activate twostream
-conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0
-conda install pandas
-conda install tqdm
-conda install pillow
+conda create -n twostream python=3.6  
+conda activate twostream  
+conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0  
+conda install pandas  
+conda install tqdm  
+conda install pillow  
 pip install tensorboard==2.1.1
 
 ### Train:  
