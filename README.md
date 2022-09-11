@@ -22,8 +22,8 @@ If you want to train your own model, please run train.py. Note that you just nee
 
 
 ## Test:  
-Replace the test data path with your own.
-Replace the trained model path with your own.
+Replace the test data path with your own.  
+Replace the trained model path with your own.  
 run test.py
 
 ### Quick run:
