@@ -8,6 +8,7 @@ If you use this repository for your research, please consider citing our paper. 
 This repository is currently under maintenance, if you are experiencing any problems, please open an issue.
 
 ### Prerequisites:  
+We recommend using the Anaconda to manage the environment  
 conda create -n twostream python=3.6  
 conda activate twostream  
 conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0  
