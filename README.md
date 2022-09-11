@@ -34,8 +34,8 @@ If you just want to test the pre-trained model with your own images, please run 
 
 Methods  | TIMIT-LQ  | TIMIT-HQ  | Celeb-DF  | FF++/DF 
  ---- | ----- | ------  | -------| -------
- HeadPose | 55.1 |	53.2 |	54.8 |47.3 
- Multi-task | 62.2 |	55.3 |	36.5 |	76.3
+HeadPose | 55.1 |	53.2 |	54.8 |47.3 
+Multi-task | 62.2 |	55.3 |	36.5 |	76.3
 VA-MLP |61.4	| 62.1 |	48.8 |	66.4
 VA-LogReg	| 77.0 |	77.3 |	46.9 |	78.0
 Two-stream |83.5 | 	73.5 |	55.7 |	70.1
