@@ -22,10 +22,10 @@ If you want to train your own model, please run train.py. Note that you just nee
 
 
 ## Test:  
-Replace the test data path with your own.  
-Replace the trained model path with your own.  
+Modify the test data path.  
+Modify the trained model path.  
 run test.py
 
 ### Quick run:
-We have pre-trained a MSFR-A model on the Celeb-DF dataset, and the model is saved in the save_model folder. 
-If you just want to test the pre-trained model agaist your own images, please run test.py (Replace the test data path with your own.) to obtained the results.
+We have pre-trained a MSFR-A model on the Celeb-DF dataset and the model is saved in the save_model folder. 
+If you just want to test the pre-trained model with your own images, please run test.py (modify the test data path with your own path.) to obtained the results.
