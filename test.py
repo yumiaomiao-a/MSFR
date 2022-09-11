@@ -23,9 +23,9 @@ data_dir = './celeb-df-120-60(1.3)'
 #data_dir = './data-400-train-test'
 # data_dir = './new_add_exp_FF++/DF/c23'
 # data_dir = './ff_all_new/data_c40'
-# data_dir = './new_add_exp_FF++/F2F/c23'
-# data_dir = './new_add_exp_FF++/FS/c23'
-# data_dir = './second paper/face_dect/new_add_exp_FF++/NT/c23'
+# data_dir = './FF++/F2F/c23'
+# data_dir = './FF++/FS/c23'
+# data_dir = './FF++/NT/c23'
 
 
 data_transform = {
