@@ -30,7 +30,8 @@ run test.py
 We have pre-trained a MSFR-A model on the Celeb-DF dataset and the model is saved in the save_model folder. 
 If you just want to test the pre-trained model with your own images, please run test.py (modify the test data path with your own path.) to obtained the results.
 
-### Results on several datasets:
+### Results:
+The AUC (%) scores of various detection models on several datasets.
 
 Methods  | TIMIT-LQ  | TIMIT-HQ  | Celeb-DF  | FF++/DF 
  ---- | ----- | ------  | -------| -------
