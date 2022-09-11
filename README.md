@@ -25,5 +25,6 @@ Replace the test data path with your own.
 Replace the trained model path with your own.
 run test.py
 
-An example:
-We have trained a MSFR-A model on the Celeb-DF dataset, and the model are saved in the save_model folder. Then, we run test.py to obtained the results on the test set of Celeb-DF.
+Quick run:
+We have pre-trained a MSFR-A model on the Celeb-DF dataset, and the model is saved in the save_model folder. 
+If you just want to test the pre-trained model agaist your own images, please run test.py (Replace the test data path with your own.) to obtained the results.
