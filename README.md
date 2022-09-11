@@ -17,7 +17,8 @@ conda install pillow
 pip install tensorboard==2.1.1
 
 ### Train:  
-
+The train.py code uses two parallel gpus to speed up the calculation, you can modify it in other ways.  
+If you want to train your own model, please run train.py. Note that you just need to change the path of the training data to your own.
 
 
 ## Test:  
