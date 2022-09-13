@@ -6,7 +6,8 @@ This is the official repository of "MSFRNet: Two-stream Deep Forgery Detection v
 If you use this repository for your research, please consider citing our paper. This paper is currently under review, we will update the paper status here in time.
 
 This repository is currently under maintenance, if you are experiencing any problems, please open an issue.
-
+  
+  
 ### Prerequisites:  
 We recommend using the Anaconda to manage the environment.  
 conda create -n msfr python=3.6  
@@ -16,24 +17,29 @@ conda install pandas
 conda install tqdm  
 conda install pillow  
 pip install tensorboard==2.1.1
-
+  
+  
 ### Train:  
 The train.py code uses two parallel gpus to speed up the calculation, you can modify it in other ways.  
 If you want to train your own model, please run train.py. Note that you just need to change the path of the training data to your own.
-
+  
+  
 
 ## Test:  
 Modify the test data path.  
 Modify the trained model path.  
 run test.py
-
+  
+  
 ### Quick run:
 We have pre-trained a MSFR-A model on the Celeb-DF dataset and the model is saved in the save_model folder. 
 If you just want to test the pre-trained model with your own images, please run test.py (modify the test data path with your own path.) to obtained the results.
-
+  
+  
 ### Results:
 The AUC (%) scores of various detection models on several datasets.
-
+  
+  
 Methods  | TIMIT-LQ  | TIMIT-HQ  | Celeb-DF  | FF++/DF 
  ---- | ----- | ------  | -------| -------
 HeadPose | 55.1 |	53.2 |	54.8 |47.3 
