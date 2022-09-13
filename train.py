@@ -134,7 +134,7 @@ print("Chekcpoint saved")
 
 def Validation():
     model.eval()
-    test_acc = 0.0
+    val_acc = 0.0
     prob_all = []
     label_all = []
     prob_all_soft = []
@@ -157,7 +157,7 @@ def Validation():
         pred = prediction1 + prediction2 + prediction3
         prediction = torch.where(pred >= 2, 1, 0)
 
-        test_acc += torch.sum(prediction == labels1.data)
+        val_acc += torch.sum(prediction == labels1.data)
 
 
         pred1 = s1+s2+s3
@@ -315,21 +315,21 @@ def train(num_epochs):
         train_acc = train_acc / len(train_set)
         train_loss = train_loss / len(train_set)
 
-        # test_acc, test_auc = test()
-        test_acc, test_auc,recall, precision,f1 = Validation()
+  
+        val_acc, val_auc,recall, precision,f1 = Validation()
 
         # 若测试准确率高于当前最高准确率，则保存模型
-        if test_acc > best_acc:
+        if val_acc > best_acc:
             save_models(epoch)
-            best_acc = test_acc
+            best_acc = val_acc
 
-        if test_auc > best_auc:
-            best_auc = test_auc
+        if val_auc > best_auc:
+            best_auc = val_auc
 
         # 打印度量
         print(
             "Epoch {}, Train Accuracy: {} , TrainLoss: {} , Test Accuracy: {},Best Acc:{},Test AUC:{}, Best AUC:{},recall:{}, precision:{},f1:{}".format(
-                epoch, train_acc, train_loss, test_acc, best_acc, test_auc, best_auc,recall, precision,f1))
+                epoch, train_acc, train_loss, val_acc, best_acc, val_auc, best_auc,recall, precision,f1))
 
 
 if __name__ == '__main__':
