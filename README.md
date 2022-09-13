@@ -14,7 +14,7 @@ This repository is currently under maintenance, if you are experiencing any prob
  
  
 ## Prerequisites:  
-We recommend using the Anaconda to manage the environment.  
+### We recommend using the Anaconda to manage the environment.  
 - conda create -n msfr python=3.6  
 - conda activate msfr  
 - conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0  
