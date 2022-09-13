@@ -14,7 +14,7 @@ This repository is currently under maintenance, if you are experiencing any prob
  
  
 ## Prerequisites:  
-### We recommend using the Anaconda to manage the environment.  
+We recommend using the Anaconda to manage the environment.  
 - conda create -n msfr python=3.6  
 - conda activate msfr  
 - conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0  
@@ -23,7 +23,10 @@ This repository is currently under maintenance, if you are experiencing any prob
 - conda install pillow  
 - pip install tensorboard==2.1.1
   
-  
+
+## Dataset Preparation
+
+
 ## Train:  
 The train.py code uses two parallel gpus to speed up the calculation, you can modify it in other ways.  
 If you want to train your own model, please run train.py. Note that you just need to change the path of the training data to your own.
