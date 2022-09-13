@@ -10,13 +10,13 @@ This repository is currently under maintenance, if you are experiencing any prob
   
 ## Prerequisites:  
 We recommend using the Anaconda to manage the environment.  
-conda create -n msfr python=3.6  
-conda activate msfr  
-conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0  
-conda install pandas  
-conda install tqdm  
-conda install pillow  
-pip install tensorboard==2.1.1
+- conda create -n msfr python=3.6  
+- conda activate msfr  
+- conda install -c pytorch pytorch=1.7.1 torchvision=0.5.0  
+- conda install pandas  
+- conda install tqdm  
+- conda install pillow  
+- pip install tensorboard==2.1.1
   
   
 ## Train:  
