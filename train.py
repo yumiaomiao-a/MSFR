@@ -90,9 +90,9 @@ from Model import VGG_based_multi
 model = VGG_based_multi()
 
 ## load the trained model
-# dic = torch.load('xxx.pth')
+# model_dir = torch.load('xxx.pth')
 # new_state_dict = {}
-# for k,v in dic.items():
+# for k,v in model_dir.items():
 #     new_state_dict[k[7:]] = v
 # model.load_state_dict(new_state_dict)
 
