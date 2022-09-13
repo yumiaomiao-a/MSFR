@@ -1,4 +1,5 @@
 #_*_coding:utf-8 _*_
+############################### This code includes six data augmentation methods used in our paper.
 import os
 import numpy as np
 import cv2
@@ -179,7 +180,6 @@ def face_eraser_change(input_img,dir):
         # print("————————————————————————",type(face_eraser_change))
         # print("——————————————————————",face_eraser_change.dtype)
         return face_eraser_change
-
 
 
 # randomly select another input to replace the background region
