@@ -1,13 +1,18 @@
 # MSFRNet: Two-stream Deep Forgery Detection via Multi-Scale Feature Extraction
 
 ## Introduction:  
-This is the official repository of "MSFRNet: Two-stream Deep Forgery Detection via Multi-Scale Feature Extraction". Due to the different scales of tampeing traces and the different resolutions of face images, adopting common precessing pipelines and standard form of CNNs will lead to problems such as omission, redundancy, and bias when extracting key discriminative features. To solve the above issues, unlike most existing methods that treat face forensics as a vanilla binary classification task, we instead reformulate it as a multi-scale object detection problem and propose a two-stream framework based on multi-scale feature extraction. The framework of the proposed method is displayed in the img folder.
+This is the official repository of "MSFRNet: Two-stream Deep Forgery Detection via Multi-Scale Feature Extraction". Due to the different scales of tampeing traces and the different resolutions of face images, adopting common precessing pipelines and standard form of CNNs will lead to problems such as omission, redundancy, and bias when extracting key discriminative features. To solve the above issues, unlike most existing methods that treat face forensics as a vanilla binary classification task, we instead reformulate it as a multi-scale object detection problem and propose a two-stream framework based on multi-scale feature extraction. The framework of the proposed method is displayed in the picture folder.
 
-If you use this repository for your research, please consider citing our paper. This paper is currently under review, we will update the paper status here in time.
+This paper is currently under review, and we will update the paper status here in time. If you use this repository for your research, please consider citing our paper. 
 
 This repository is currently under maintenance, if you are experiencing any problems, please open an issue.
   
-  
+## Download
+- git clone https://github.com/yumiaomiao-a/MSFR.git
+- cd MSFR
+ 
+ 
+ 
 ## Prerequisites:  
 We recommend using the Anaconda to manage the environment.  
 - conda create -n msfr python=3.6  
