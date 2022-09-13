@@ -32,15 +32,17 @@ You need to download the publicly available face forensics datasets. In this wor
 
 
 ## Training:  
-The uploaded train.py code adopts two parallel GPUs to speed up the calculation, you can modify it to other ways, such as single-GPU and multiple-GPUs. 
-If you want to train your own model, please run train.py. Remember to modify the path of the training data to your own.
+The uploaded train.py code adopts two parallel GPUs to speed up the calculation, you can modify it to other ways, such as single-GPU or multiple-GPUs. 
+In train.py, modify data_dir to the root of your training dataset.
+Run train.py.
+
   
   
 
 ## Testing:  
-Modify the path of the test data.  
-Modify the path of the trained model.  
-run test.py
+Modify the data_dir to the root of your own dataset.  
+Modify the model_dir to the root of your pre-trained model.  
+Run test.py
   
   
 ## Quick run:
@@ -78,5 +80,8 @@ MSFRNet (Ours) |	100	| 100 |	99.80 |	98.82
 MSFRNet-A (Ours) |	100	| 99.99| 	99.74 |	98.38
 
 
+## Citation
+If you find this work useful for your research, please kindly cite our paper.
+This paper is currently under review, and we will update the paper status here in time.
 
  
