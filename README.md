@@ -81,7 +81,8 @@ MSFRNet-A (Ours) |	100	| 99.99| 	99.74 |	98.38
 
 
 ## Citation
+This paper is currently under review, and we will update the paper status here in time.  
 If you find this work useful for your research, please kindly cite our paper.
-This paper is currently under review, and we will update the paper status here in time.
+
 
  
