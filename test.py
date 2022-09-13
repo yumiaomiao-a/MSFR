@@ -18,14 +18,15 @@ from sklearn.metrics import recall_score,f1_score,precision_score
 
 
 # import data path
-data_dir = './celeb-df-120-60(1.3)'
-# data_dir = './timit-hq-10000-2800'
-#data_dir = './data-400-train-test'
-# data_dir = './new_add_exp_FF++/DF/c23'
-# data_dir = './ff_all_new/data_c40'
+data_dir = './celeb-df'
+# data_dir = './timit-hq'
+# data_dir = './timit-lq'
+# data_dir = './ff++_all_new/data_c40'
+# data_dir = './ff++_all_new/data_c40'
 # data_dir = './FF++/F2F/c23'
 # data_dir = './FF++/FS/c23'
 # data_dir = './FF++/NT/c23'
+# data_dir = './FF++/DF/c23'
 
 
 data_transform = {
