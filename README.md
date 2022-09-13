@@ -31,25 +31,25 @@ You need to download the publicly available face forensics datasets. In this wor
 - https://github.com/ondyari/FaceForensics
 
 
-## Train:  
-The train.py code uses two parallel gpus to speed up the calculation, you can modify it in other ways.  
-If you want to train your own model, please run train.py. Note that you just need to change the path of the training data to your own.
+## Training:  
+The uploaded train.py code adopts two parallel GPUs to speed up the calculation, you can modify it to other ways, such as single-GPU and multiple-GPUs. 
+If you want to train your own model, please run train.py. Remember to modify the path of the training data to your own.
   
   
 
-## Test:  
-Modify the test data path.  
-Modify the trained model path.  
+## Testing:  
+Modify the path of the test data.  
+Modify the path of the trained model.  
 run test.py
   
   
 ## Quick run:
-We have pre-trained a MSFR-A model on the Celeb-DF dataset and the model is saved in the save_model folder. 
-If you just want to test the pre-trained model with your own images, please run test.py (modify the test data path with your own path.) to obtained the results.
+We have pre-trained a MSFR-A model on the Celeb-DF dataset and the model is saved in the save_model fmolder. 
+If you just want to test your own images with the pretrained model, please run test.py (modify to your own test data path.) to obtained the results.
   
   
-## Results:
-The AUC (%) scores of various detection models on several datasets.
+## Benchmark Results:
+Here we list the performance (AUC (%)) of several mainstream deepfake detection methods and our method on three datasets. Please refer to our paper for more details. 
   
   
 Methods  | TIMIT-LQ  | TIMIT-HQ  | Celeb-DF  | FF++/DF 
