@@ -22,7 +22,7 @@ import cv2
 
 
 # 读取数据
-data_dir = './celeb-df-120-60(1.3)'
+data_dir = './celeb-df'
 # data_dir = './timit-hq'
 # data_dir = './timit-lq'
 # data_dir = './ff++_all_new/data_c40'
@@ -62,7 +62,7 @@ data_transform = {
         transforms.ToTensor(),
         transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225])
     ]),
-    'test':transforms.Compose([
+    'val':transforms.Compose([
         transforms.Scale([224,224]),
         transforms.ToTensor(),
         transforms.Normalize([0.485,0.456,0.406],[0.229,0.224,0.225])
@@ -71,19 +71,19 @@ data_transform = {
 
 
 image_datasets = {x:datasets.ImageFolder(root = os.path.join(data_dir,x),
-                                         transform = data_transform[x]) for x in ['train', 'test']}
+                                         transform = data_transform[x]) for x in ['train', 'val']}
 train_set = image_datasets['train']
-test_set = image_datasets['test']
+test_set = image_datasets['val']
 
 
 dataloader = {x:torch.utils.data.DataLoader(dataset = image_datasets[x],
                                             batch_size = 32,
-                                            shuffle = True) for x in ['train','test'] }  # 读取完数据后，对数据进行装载
+                                            shuffle = True) for x in ['train','val'] }  # 读取完数据后，对数据进行装载
 
 train_dataloader = dataloader['train']
-test_dataloader = dataloader ['test']
+val_dataloader = dataloader ['val']
 
-dataset_size = {x:len(image_datasets[x]) for x in ['train','test']}
+dataset_size = {x:len(image_datasets[x]) for x in ['train','val']}
 
 
 from Model import VGG_based_multi
@@ -132,7 +132,7 @@ def save_models(epoch):
 print("Chekcpoint saved")
 
 
-def test():
+def Validation():
     model.eval()
     test_acc = 0.0
     prob_all = []
@@ -318,7 +318,7 @@ def train(num_epochs):
         train_loss = train_loss / len(train_set)
 
         # test_acc, test_auc = test()
-        test_acc, test_auc,recall, precision,f1 = test()
+        test_acc, test_auc,recall, precision,f1 = Validation()
 
         # 若测试准确率高于当前最高准确率，则保存模型
         if test_acc > best_acc:
