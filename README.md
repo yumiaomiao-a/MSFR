@@ -25,7 +25,7 @@ We recommend using the Anaconda to manage the environment.
   
 
 ## Dataset Preparation
-You need to download the publicly avaliable face forensics datasets from their offical websites. In this work, we conduct experiments on DeepfakeTIMIT, Celeb-DF and FaceForensics++(FF++) datasets, as follows:
+You need to download the publicly available face forensics datasets. In this work, we conduct experiments on DeepfakeTIMIT, Celeb-DF and FaceForensics++(FF++), their official download links are as follows:
 - https://www.idiap.ch/en/dataset/deepfaketimit
 - https://github.com/yuezunli/celeb-deepfakeforensics
 - https://github.com/ondyari/FaceForensics
