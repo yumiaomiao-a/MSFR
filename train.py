@@ -217,7 +217,7 @@ def train(num_epochs):
                         if p1<0.5:
                             labels[j] = 1-labels[j]
                         else:
-                            labels[j] = 1-labels[j]
+                            labels[j] = labels[j]
                     except:
                         images[j] = images[j]
                         labels[j] = labels[j]
@@ -232,10 +232,10 @@ def train(num_epochs):
                     try:
                         images[j] = face_eraser_shuffle(images[j])
                         p1 = np.random.rand()
-                        # if p1<0.5:
-                        #     labels[j] = 1-labels[j]
-                        # else:
-                        #     labels[j] = 1-labels[j]
+                        if p1<0.5:
+                            labels[j] = 1-labels[j]
+                        else:
+                           labels[j] = labels[j]
                     except:
                         images[j] = images[j]
 
@@ -252,7 +252,6 @@ def train(num_epochs):
                         for m in range(len(images)):
                             if labels[m]!=l:
                                 fill.append(images[m])
-
                         images[j] = face_eraser_change(images[j],fill)
                         labels[j] = 1-labels[j]
                     except:
@@ -265,9 +264,8 @@ def train(num_epochs):
                         for m in range(len(images)):
                             if labels[m]!=l:
                                 fill.append(images[m])
-
                         images[j] = bg_eraser_change(images[j],fill)
-
+                        labels[j] = labels[j]
                     except:
                         images[j] = images[j]
 
